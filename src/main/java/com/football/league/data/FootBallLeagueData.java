@@ -56,17 +56,18 @@ public class FootBallLeagueData {
 	
 	static {
 		Integer j = 200;
-		for(Country country: countries) {
-			League league = new League();
-			league.setCountry_id(country.getCountry_id());
-			league.setCountry_name(country.getCountry_name());
+		for(Country country: countries) {			
 			List<String> leaguesList = countryLeagues.get(country.getCountry_id());
+			System.out.println(leaguesList);
 			for(String leagueName : leaguesList) {
+				League league = new League();
+				league.setCountry_id(country.getCountry_id());
+				league.setCountry_name(country.getCountry_name());
 				league.setLeague_id(j.toString());
 				league.setLeague_name(leagueName);
 				leagues.add(league);
 				j++;
-			}
+			}			
 		}
 	}
 	

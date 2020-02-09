@@ -36,7 +36,7 @@ public class FootBallLeagueController {
 			return getLeagues(country_id);
 		if(action.equalsIgnoreCase("get_standings"))
 			return getStandings(league_id);
-		return "Hello from Foot Ball League App";
+		return "Unknown action specified.";
 	}
 	
 	private List<Country> getCountries() {

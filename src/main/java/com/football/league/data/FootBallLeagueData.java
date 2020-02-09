@@ -58,7 +58,6 @@ public class FootBallLeagueData {
 		Integer j = 200;
 		for(Country country: countries) {			
 			List<String> leaguesList = countryLeagues.get(country.getCountry_id());
-			System.out.println(leaguesList);
 			for(String leagueName : leaguesList) {
 				League league = new League();
 				league.setCountry_id(country.getCountry_id());
@@ -69,6 +68,8 @@ public class FootBallLeagueData {
 				j++;
 			}			
 		}
+		System.out.println(leagues);
+		
 	}
 	
 	static {
@@ -106,11 +107,73 @@ public class FootBallLeagueData {
 				"  }", Standings.class);
 		Standings standing2 = new ObjectMapper().readValue("{\r\n" + 
 				"    \"country_name\": \"England\",\r\n" + 
-				"    \"league_id\": \"203\",\r\n" + 
+				"    \"league_id\": \"202\",\r\n" + 
 				"    \"league_name\": \"Premier League\",\r\n" + 
 				"    \"team_id\": \"2626\",\r\n" + 
-				"    \"team_name\": \"Manchester City\",\r\n" + 
+				"    \"team_name\": \"Chelsea\",\r\n" + 
+				"    \"overall_league_position\": \"2\",\r\n" + 
+				"    \"overall_league_payed\": \"38\",\r\n" + 
+				"    \"overall_league_W\": \"32\",\r\n" + 
+				"    \"overall_league_D\": \"2\",\r\n" + 
+				"    \"overall_league_L\": \"4\",\r\n" + 
+				"    \"overall_league_GF\": \"95\",\r\n" + 
+				"    \"overall_league_GA\": \"23\",\r\n" + 
+				"    \"overall_league_PTS\": \"98\",\r\n" + 
+				"    \"home_league_position\": \"1\",\r\n" + 
+				"    \"home_league_payed\": \"19\",\r\n" + 
+				"    \"home_league_W\": \"18\",\r\n" + 
+				"    \"home_league_D\": \"0\",\r\n" + 
+				"    \"home_league_L\": \"1\",\r\n" + 
+				"    \"home_league_GF\": \"57\",\r\n" + 
+				"    \"home_league_GA\": \"12\",\r\n" + 
+				"    \"home_league_PTS\": \"54\",\r\n" + 
+				"    \"away_league_position\": \"1\",\r\n" + 
+				"    \"away_league_payed\": \"19\",\r\n" + 
+				"    \"away_league_W\": \"14\",\r\n" + 
+				"    \"away_league_D\": \"2\",\r\n" + 
+				"    \"away_league_L\": \"3\",\r\n" + 
+				"    \"away_league_GF\": \"38\",\r\n" + 
+				"    \"away_league_GA\": \"11\",\r\n" + 
+				"    \"away_league_PTS\": \"44\"\r\n" + 
+				"  }", Standings.class);
+		Standings standing4 = new ObjectMapper().readValue("{\r\n" + 
+				"    \"country_name\": \"England\",\r\n" + 
+				"    \"league_id\": \"203\",\r\n" + 
+				"    \"league_name\": \"EGA\",\r\n" + 
+				"    \"team_id\": \"2626\",\r\n" + 
+				"    \"team_name\": \"Manchester United\",\r\n" + 
 				"    \"overall_league_position\": \"1\",\r\n" + 
+				"    \"overall_league_payed\": \"38\",\r\n" + 
+				"    \"overall_league_W\": \"32\",\r\n" + 
+				"    \"overall_league_D\": \"2\",\r\n" + 
+				"    \"overall_league_L\": \"4\",\r\n" + 
+				"    \"overall_league_GF\": \"95\",\r\n" + 
+				"    \"overall_league_GA\": \"23\",\r\n" + 
+				"    \"overall_league_PTS\": \"98\",\r\n" + 
+				"    \"home_league_position\": \"1\",\r\n" + 
+				"    \"home_league_payed\": \"19\",\r\n" + 
+				"    \"home_league_W\": \"18\",\r\n" + 
+				"    \"home_league_D\": \"0\",\r\n" + 
+				"    \"home_league_L\": \"1\",\r\n" + 
+				"    \"home_league_GF\": \"57\",\r\n" + 
+				"    \"home_league_GA\": \"12\",\r\n" + 
+				"    \"home_league_PTS\": \"54\",\r\n" + 
+				"    \"away_league_position\": \"1\",\r\n" + 
+				"    \"away_league_payed\": \"19\",\r\n" + 
+				"    \"away_league_W\": \"14\",\r\n" + 
+				"    \"away_league_D\": \"2\",\r\n" + 
+				"    \"away_league_L\": \"3\",\r\n" + 
+				"    \"away_league_GF\": \"38\",\r\n" + 
+				"    \"away_league_GA\": \"11\",\r\n" + 
+				"    \"away_league_PTS\": \"44\"\r\n" + 
+				"  }", Standings.class);
+		Standings standing3 = new ObjectMapper().readValue("{\r\n" + 
+				"    \"country_name\": \"England\",\r\n" + 
+				"    \"league_id\": \"202\",\r\n" + 
+				"    \"league_name\": \"Premier League\",\r\n" + 
+				"    \"team_id\": \"2626\",\r\n" + 
+				"    \"team_name\": \"Manchester United\",\r\n" + 
+				"    \"overall_league_position\": \"3\",\r\n" + 
 				"    \"overall_league_payed\": \"38\",\r\n" + 
 				"    \"overall_league_W\": \"32\",\r\n" + 
 				"    \"overall_league_D\": \"2\",\r\n" + 
@@ -137,6 +200,8 @@ public class FootBallLeagueData {
 				"  }", Standings.class);
 		standings.add(standing1);
 		standings.add(standing2);
+		standings.add(standing3);
+		standings.add(standing4);
 	   } catch(Exception ex) {
 		   
 	   }
